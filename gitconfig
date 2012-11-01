@@ -1,30 +1,76 @@
-[color]
-	diff = auto
-	status = auto
-	branch = auto
-	ui = auto
 [user]
-  name = Nathan Witmer
-  email = nwitmer@gmail.com
-[svn]
-[apply]
-	whitespace = fix
-[alias]
-	ci = commit
-	st = status
-	co = checkout
-	dh = diff -w HEAD
-	ds = diff HEAD --stat
-	unstage = reset HEAD --
-	di = diff --cached
-	pr = pull --rebase --stat
-[core]
-	excludesfile = /Users/nathan/.gitignore
-[branch]
-	autosetupmerge = true
-[diff "ruby"]
-	funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
+    name = Jason E. Rist
+    email = jrist@redhat.com
+
 [diff]
-	tool = opendiff
-[merge]
-	tool = opendiff
+    color = auto
+    rename = copy
+
+[push]
+    default = tracking
+
+[pager]
+    color = true
+
+[status]
+    color = auto
+
+[core]
+
+[color]
+    ui = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[color]
+    ui = true
+
+[color "diff"]
+    whitespace = red reverse
+
+[core]
+    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[alias]
+    g = grep -n
+    st = status -sb
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    ls = ls-files
+    last = cat-file commit HEAD
+    unadd = reset HEAD
+    staged = diff --cached
+    amend = commit --amend -C HEAD
+    find = !sh -c 'git ls-tree -r --name-only HEAD | grep --color $1' -
+
+[branch "master"]
+    rebase = true
+
+[giggle]
+    main-window-maximized = true
+    main-window-geometry = 458x280+642+333
+    file-view-vpane-position = 608
+    history-view-vpane-position = 830
+    main-window-view = FileView
+    file-view-hpane-position = 329
+[gui]
+    recentrepo = /workspace/katello
