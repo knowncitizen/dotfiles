@@ -1,4 +1,4 @@
-# export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+c# export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/Users/nathan/bin:/Users/nathan/scripts:$PATH #/Users/nathan/bin/gitflow:$PATH
 # export PATH=/opt/local/lib/postgresql84/bin:$PATH
